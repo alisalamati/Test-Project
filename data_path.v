@@ -12,7 +12,7 @@ wire [7:0] a_side;
 
 IR ir (data_bus_in, ld_ir, clk, ir_out);
 PC pc (ir_out[5:0], ld_pc, inc_pc, clr_pc, clk, pc_out);
-AC ac (data_bus_in, ld_ac, clk, a_side);
+AC ac (data_bus_in,data_bus_out, ld_ac,pass_add, clk, a_side);
 ALU alu (a_side, {2'b00, ir_out[5:0]}, pass_add, data_bus_out);
 
 assign adr_bus = ir_on_adr ? ir_out[5:0] : pc_on_adr ? pc_out : 6'b0;
