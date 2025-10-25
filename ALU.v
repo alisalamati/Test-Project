@@ -5,3 +5,5 @@ input pass_add;
 output [7:0] data_bus_out;
 
 assign data_bus_out = pass_add ? a_side + from_ir: a_side;
+
+endmodule

@@ -12,4 +12,4 @@ always @(posedge clk) begin
 	pc_out <= internal_pc;
 end
 
-end module
+endmodule

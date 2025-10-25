@@ -10,5 +10,5 @@ always @(posedge clk) begin
 		ir_out <= data_bus_in;
 end
 
-end module;
+endmodule
 	

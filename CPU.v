@@ -1,4 +1,4 @@
-module CPU (reset, clk. adr_bus, rd_mem, wr_mem, data_bus_in, data_bus_out);
+module CPU (reset, clk, adr_bus, rd_mem, wr_mem, data_bus_in, data_bus_out);
 
 input reset;
 input clk;
@@ -16,4 +16,4 @@ Controller cu (reset, clk, op_code, rd_mem, wr_mem, ir_on_adr, pc_on_adr,
 DataPath dp (clk, ir_on_adr, pc_on_adr, ld_ir, ld_ac, ld_pc, inc_pc, clr_pc, pass_add,
 				adr_bus, op_code, data_bus_in, data_bus_out);
 
-end module
+endmodule
