@@ -17,8 +17,8 @@ initial begin
     clk = 1'b0;
     reset = 1'b1; #7; reset = 1'b0;
 	d_in = 8'b00000000;
-    dataFile = $fopen("C:/Users/Asus/Desktop/Kharazmi/Term3/Test/Project/Data.ins", "r");
-    reportFile = $fopen("C:/Users/Asus/Desktop/Kharazmi/Term3/Test/Project/Data.rpt", "w");
+    dataFile = $fopen("Data.ins", "r");
+    reportFile = $fopen("Data.rpt", "w");
 	@(posedge clk);
     while(!$feof(dataFile)) begin
 	  status = $fscanf(dataFile, "%b\n", d_in);
